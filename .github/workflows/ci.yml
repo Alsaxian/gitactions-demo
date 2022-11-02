@@ -14,6 +14,8 @@ jobs:
     - name: Install and Build
       run: |
         npm install
+        npm uninstall eslint
+        npm i eslint@6.1.0
         npm run-script build
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v4
